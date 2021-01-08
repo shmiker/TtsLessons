@@ -11,7 +11,7 @@ public class TaskService {
 
     public String removeDuplicates(String s) {
         char[] letters = new char[s.length()];//создаем массив символов и переводим в него строку
-        char[] letters1 = s.toCharArray();//создаем массив символов и переводим в него строку
+        // char[] letters1 = s.toCharArray(); более короткая реализация записи в букв в массив
         Set<Character> words =new LinkedHashSet<>();
         //делим строку по букве и записываем ее в массив
         for (int i = 0; i < s.length(); i++) {
