@@ -3,13 +3,16 @@ package com.tts.task.service;
 import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Component
 public class TaskService {
 
     public String removeDuplicates(String s) {
         char[] letters = new char[s.length()];//создаем массив символов и переводим в него строку
-        HashSet<Character> words =new HashSet<>();
+        char[] letters1 = s.toCharArray();//создаем массив символов и переводим в него строку
+        Set<Character> words =new LinkedHashSet<>();
         //делим строку по букве и записываем ее в массив
         for (int i = 0; i < s.length(); i++) {
             letters[i] = s.charAt(i);
@@ -18,11 +21,16 @@ public class TaskService {
         for (char letter : letters) {
             words.add(letter);
         }
-//        String s =
+
       //TODO
+//переносим массив в строку
+        StringBuilder builder = new StringBuilder();
+        for(Character a : words) {
+            builder.append(a);
+        }
+        String str = builder.toString();
 
-
-        return "zzz";
+        return str;
     }
 
 }
