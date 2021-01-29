@@ -28,9 +28,8 @@ public class TaskService {
         for(Character a : words) {
             builder.append(a);
         }
-        String str = builder.toString();
 
-        return str;
+        return builder.toString();
     }
 
 }
