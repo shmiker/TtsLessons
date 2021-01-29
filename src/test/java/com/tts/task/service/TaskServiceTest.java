@@ -32,4 +32,26 @@ class TaskServiceTest {
 
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    void reverseString_1() {
+
+        String input = "tits";
+
+        String expected = "stit";
+        String actual = taskService.reverseString(input);
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    void reverseString_2() {
+
+        String input = "leetcode";
+
+        String expected = "edocteel";
+        String actual = taskService.reverseString(input);
+
+        Assert.assertEquals(expected, actual);
+    }
 }
