@@ -34,7 +34,12 @@ public class TaskService {
     public String reverseString(String input){
         // перевернуть строку
 
-        return "zzz";
+        char[] array = input.toCharArray();
+        String result = "";
+        for (int i = array.length - 1; i >= 0; i--) {
+            result = result + array[i];
+        }
+        return result;
     }
 
 }
