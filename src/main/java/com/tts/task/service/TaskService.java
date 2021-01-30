@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.stream.IntStream;
 
 @Component
 public class TaskService {
@@ -40,6 +41,11 @@ public class TaskService {
             result = result + array[i];
         }
         return result;
+    }
+
+    public boolean containsDuplicate(int[] input){
+        // проверить, содержит ли массив дубликаты
+        return true;
     }
 
 }

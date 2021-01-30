@@ -54,4 +54,26 @@ class TaskServiceTest {
 
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    void containsDuplucates_1(){
+        int[] input = new int[]{1,2,3,1};
+
+        Assert.assertTrue(taskService.containsDuplicate(input));
+
+    }
+
+    @Test
+    void containsDuplucates_2(){
+        int[] input = new int[]{1,2,3,4};
+
+        Assert.assertFalse(taskService.containsDuplicate(input));
+    }
+
+    @Test
+    void containsDuplucates_3(){
+        int[] input = new int[]{1,1,1,3,3,4,3,2,4,2};
+
+        Assert.assertTrue(taskService.containsDuplicate(input));
+    }
 }
